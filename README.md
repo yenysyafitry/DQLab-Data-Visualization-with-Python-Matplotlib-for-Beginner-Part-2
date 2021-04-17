@@ -1,4 +1,4 @@
-### Membuat Multi-Line Chart](https://academy.dqlab.id/main/livecode/165/318/1483)
+### Membuat Multi-Line Chart 
 
 ```plantuml
 # Import library
