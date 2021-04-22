@@ -36,10 +36,10 @@ plt.show()
 ----
 
 ### Kustomisasi Legend 
-Beberapa parameter yang bisa ditambahkan untuk legend:
-<ol><li>
+<p align="justify">Beberapa parameter yang bisa ditambahkan untuk legend:</p>
+<ol align="justify"><li>
 loc: untuk menentukan posisi legend, berikut beberapa lokasi legend yang bisa didefinisikan:</li>
-<ul><li>'upper left', 'upper right', 'lower left', 'lower right':legend diletakkan di pojok dari axes (atas kiri, atas kanan, bawah kiri, atas kiri)</li>
+<ul align="justify"><li>'upper left', 'upper right', 'lower left', 'lower right':legend diletakkan di pojok dari axes (atas kiri, atas kanan, bawah kiri, atas kiri)</li>
 <li>'upper center', 'lower center', 'center left', 'center right': legend diletakkan di tepi axes (atas tengah, bawah tengah, tengah kiri, tengah kanan)</li>
 <li>'center': legend diletakkan di tengah-tengah axes</li>
 <li>'best': matplotlib akan memilih satu dari sekian kemungkinan lokasi legend di atas yang paling tidak overlap dengan isi grafik</li></ul>
@@ -94,6 +94,8 @@ plt.show()
 | :--     | 
 | <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (2).png">|
 </br>
+<p align="justify">Selain itu, perhatikan juga bahwa pada grafik tersebut, list warnanya berbeda, tidak default seperti pada brand. Itu karena di function plot() ditambahkan parameter cmap (yakni, color map) yang mendefinisikan sekelompok warna yang akan diberikan untuk tiap line. Di sini yang digunakan adalah ‘Set1’, yakni satu set warna yang biasa digunakan untuk warna yang diskrit. Untuk mengetahui jenis-jenis color map, bisa dilihat di halaman web berikut: https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html.
+</br>Dari grafik ini, terlihat ada beberapa provinsi yang mendominasi kenaikan GMV, seperti DKI Jakarta dan Jawa Barat. Tapi karena provinsinya banyak, yang bawah-bawah jadi kurang jelasnya. Bercampur semua begitu garisnya.</p>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1486">Link materi : academy.dqlab.id/main/livecode/165/318/1486</a>
 
 ----
@@ -128,13 +130,20 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (3).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1487">Link materi : academy.dqlab.id/main/livecode/165/318/1487</a>
 
 ----
 
 ### Membuat Anotasi 
+<p align="justify">beberapa parameter untuk anotasi yang bisa ditambahkan:</p>
+<ol align="justify"><li>xytext: Koordinat dari teks. Jika tidak diisi,maka teks akan diletakkan di koordinat point yang dianotasi (parameter kedua)</li>
+<li>arrowprops:Konfigurasi dari panah yang ditambahkan di anotasi, berupa dictionary. Beberapa hal yang bisa diset:</ol></li>
+<ul align="justify"><li>arrowstyle: menentukan bentuk dari panah penunjuk. Isinya bisa berupa bentuk seperti '->', '-|>', '<->', '-[', dsb. Bisa juga berupa tulisan seperti 'fancy', 'simple', 'wedge', etc.</li>
+<li>connectionstyle: menentukan bentuk dari garis panahnya. Ada beberapa nilai yang bisa digunakan, misalnya 'arc' dan 'arc3' yang berupa garis lurus, 'angle' untuk garis berbelok siku, 'angle3' untuk garis berbelok lengkung, atau 'bar' untuk berbelok siku dua kali.</li>
+	<li>color: menentukan warna dari panah</li></ul>
+	
 ```plantuml
 import matplotlib.pyplot as plt
 dataset.groupby(['order_month','province_top'])['gmv'].sum().unstack().plot(marker='.', cmap='plasma')
@@ -166,7 +175,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (4).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1489">Link materi : academy.dqlab.id/main/livecode/165/318/1489</a>
 
@@ -180,7 +189,7 @@ print(dataset_dki_q4.head())
 
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/Screenshot_5.jpg">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1490">Link materi : academy.dqlab.id/main/livecode/165/319/1490</a>
 
@@ -197,7 +206,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/Screenshot_5.jpg">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1491">Link materi : academy.dqlab.id/main/livecode/165/319/1491</a>
 
@@ -220,7 +229,7 @@ plt.show()
 
 |Output : |
 | :--     | 
-| Hello, World!|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/Screenshot_5.jpg">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1492">Link materi : academy.dqlab.id/main/livecode/165/319/1492</a>
 
