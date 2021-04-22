@@ -578,3 +578,6 @@ plt.show()
 <a href="https://academy.dqlab.id/main/livecode/165/321/240">Link materi : academy.dqlab.id/main/livecode/165/321/240</a>
 
 ----
+
+Yuk belajar data science bersama DQLab dengan daftarkan diri kamu dengan signup di dqlab.id. Dapatkan potongan 10% dengan menggunakan kode referral ini  ! <a href="https://dqlab.id/signup?referralCode=YENN3520"> </a>
+
