@@ -579,5 +579,7 @@ plt.show()
 
 ----
 
-Yuk belajar data science bersama DQLab dengan daftarkan diri kamu dengan signup di dqlab.id. Dapatkan potongan 10% dengan menggunakan kode referral ini  ! <a href="https://dqlab.id/signup?referralCode=YENN3520"> </a>
+Yuk belajar data science bersama DQLab dengan daftarkan diri kamu dengan signup di dqlab.id. Dapatkan potongan 10% dengan menggunakan kode referral ini  ! 
+<a href="https://dqlab.id/signup?referralCode=YENN3520">Klik Gabung</a>
+
 
