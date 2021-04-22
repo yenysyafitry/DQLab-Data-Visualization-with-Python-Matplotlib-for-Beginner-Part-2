@@ -1,4 +1,5 @@
 ### Membuat Multi-Line Chart 
+<p align="justify">Kode untuk membaca dataset dan penambahan kolom baru dataset telah diberikan.Setelah mengetikkan baris-baris perintah dari baris ke-13 s/d 22 dan membuat grafik multi-line chart seperti berikut</p>
 
 ```plantuml
 # Import library
@@ -25,15 +26,29 @@ plt.gcf().set_size_inches(10, 5)
 plt.tight_layout()
 plt.show()
 ```
+
 |Output : |
 | :--     | 
-| download.png|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download.png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1483">Link materi : academy.dqlab.id/main/livecode/165/318/1483</a>
 
 ----
 
 ### Kustomisasi Legend 
+Beberapa parameter yang bisa ditambahkan untuk legend:
+<ol><li>
+loc: untuk menentukan posisi legend, berikut beberapa lokasi legend yang bisa didefinisikan:</li>
+<ul><li>'upper left', 'upper right', 'lower left', 'lower right':legend diletakkan di pojok dari axes (atas kiri, atas kanan, bawah kiri, atas kiri)</li>
+<li>'upper center', 'lower center', 'center left', 'center right': legend diletakkan di tepi axes (atas tengah, bawah tengah, tengah kiri, tengah kanan)</li>
+<li>'center': legend diletakkan di tengah-tengah axes</li>
+<li>'best': matplotlib akan memilih satu dari sekian kemungkinan lokasi legend di atas yang paling tidak overlap dengan isi grafik</li></ul>
+<li>bbox_to_anchor: biasanya digunakan untuk adjust lokasi dari legend. Bisa berisi 2 angka yang menunjukkan koordinat x dan y (misal (1.6,0.5) berarti geser 1.6 ke kanan dan 0.5 ke atas). Bisa juga berisi 4 angka, angka ketiga dan keempat menyatakan width (lebar) dan height (tinggi) dari legend.</li>
+<li>shadow: jika diisi True, maka kotak legend akan memiliki bayangan.</li>
+<li>ncol: jumlah kolom dari isi legend, defaultnya adalah 1</li>
+<li>fontsize: ukuran huruf pada legend</li>
+<li>title: memberikan judul pada legend</li>
+	<li>title_fontsize: ukuran huruf pada judul legend</li></ol>
 
 ```plantuml
 import matplotlib.pyplot as plt
@@ -52,7 +67,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| download (1).png|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (1).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1484">Link materi : academy.dqlab.id/main/livecode/165/318/1484</a>
 
