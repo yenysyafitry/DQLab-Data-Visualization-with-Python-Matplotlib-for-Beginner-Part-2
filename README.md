@@ -2,18 +2,18 @@
 <p align="justify">Kode untuk membaca dataset dan penambahan kolom baru dataset telah diberikan.Setelah mengetikkan baris-baris perintah dari baris ke-13 s/d 22 dan membuat grafik multi-line chart seperti berikut</p>
 
 ```plantuml
-# Import library
+#Import library
 import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
-# Baca dataset
+#Baca dataset
 dataset = pd.read_csv('https://storage.googleapis.com/dqlab-dataset/retail_raw_reduced.csv')
-# Buat kolom baru yang bertipe datetime dalam format '%Y-%m'
+#Buat kolom baru yang bertipe datetime dalam format '%Y-%m'
 dataset['order_month'] = dataset['order_date'].apply(lambda x: datetime.datetime.strptime(x, "%Y-%m-%d").strftime('%Y-%m'))
-# Buat Kolom GMV
+#Buat Kolom GMV
 dataset['gmv'] = dataset['item_price']*dataset['quantity']
 
-# Buat Multi-Line Chart
+#Buat Multi-Line Chart
 dataset.groupby(['order_month','brand'])['gmv'].sum().unstack().plot()
 plt.title('Monthly GMV Year 2019 - Breakdown by Brand',loc='center',pad=30, fontsize=20, color='blue')
 plt.xlabel('Order Month', fontsize = 15)
@@ -102,7 +102,7 @@ plt.show()
 
 ### Membuat Line Chart GMV Breakdown by Top Provinces 
 ```plantuml
-# Buat variabel untuk 5 propinsi dengan GMV tertinggi
+#Buat variabel untuk 5 propinsi dengan GMV tertinggi
 top_provinces = (dataset.groupby('province')['gmv']
                         .sum()
                         .reset_index()
@@ -110,10 +110,10 @@ top_provinces = (dataset.groupby('province')['gmv']
                         .head(5))
 print(top_provinces)
 
-# Buat satu kolom lagi di dataset dengan nama province_top
+#Buat satu kolom lagi di dataset dengan nama province_top
 dataset['province_top'] = dataset['province'].apply(lambda x: x if (x in top_provinces['province'].to_list()) else 'other')
 
-# Plot multi-line chartnya
+#Plot multi-line chartnya
 import matplotlib.pyplot as plt
 dataset.groupby(['order_month','province_top'])['gmv'].sum().unstack().plot(marker='.', cmap='plasma')
 plt.title('Monthly GMV Year 2019 - Breakdown by Province', loc='center', pad=30, fontsize=20, color='blue')
@@ -155,14 +155,14 @@ plt.ylim(ymin=0)
 labels, locations = plt.yticks()
 plt.yticks(labels, (labels/1000000000).astype(int))
 plt.legend(loc='upper center', bbox_to_anchor=(1.1, 1), shadow=True, ncol=1)
-# Anotasi pertama
+#Anotasi pertama
 plt.annotate('GMV other meningkat pesat', xy=(5, 900000000), 
 			 xytext=(4, 1700000000), weight='bold', color='red',
 			 arrowprops=dict(arrowstyle='fancy',
 							 connectionstyle="arc3",
 							 color='red'))
 
-# Anotasi kedua
+#Anotasi kedua
 plt.annotate('DKI Jakarta mendominasi', xy=(3, 3350000000),
 			 xytext=(0, 3700000000), weight='bold', color='red',
 			 arrowprops=dict(arrowstyle='->',
@@ -281,6 +281,7 @@ plt.xticks(rotation=0)
 plt.tight_layout()
 plt.show()
 ```
+
 |Output : |
 | :--     | 
 | <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (8).png">|
@@ -317,11 +318,11 @@ print(data_per_customer.sort_values(by='orders', ascending=False))
 ```plantuml
 import matplotlib.pyplot as plt
 plt.clf()
-# Histogram pertama
+#Histogram pertama
 plt.figure()
 plt.hist(data_per_customer['orders'])
 plt.show()
-# Histogram kedua
+#Histogram kedua
 plt.figure()
 plt.hist(data_per_customer['orders'], range=(1,5))
 plt.title('Distribution of Number of Orders per Customer\nDKI Jakarta in Q4 2019', fontsize=15, color='blue')
@@ -383,11 +384,11 @@ plt.show()
 ```plantuml
 import matplotlib.pyplot as plt
 plt.clf()
-# Scatterplot pertama
+#Scatterplot pertama
 plt.figure()
 plt.scatter(data_per_customer['quantity'], data_per_customer['gmv'])
 plt.show()
-# Scatterplot kedua: perbaikan scatterplot pertama
+#Scatterplot kedua: perbaikan scatterplot pertama
 plt.figure(figsize=(10,8))
 plt.scatter(data_per_customer['quantity'], data_per_customer['gmv'], marker='+', color='red')
 plt.title('Correlation of Quantity and GMV per Customer\nDKI Jakartain Q4 2019', fontsize=15, color='blue')
@@ -419,7 +420,7 @@ top_brands = (dataset[dataset['order_month']=='2019-12'].groupby('brand')['quant
 #membuat dataframe baru, filter hanya di bulan Desember 2019 dan hanya top 5 brands
 dataset_top5brand_dec = dataset[(dataset['order_month']=='2019-12') & (dataset['brand'].isin(top_brands['brand'].to_list()))]
 
-# print top brands
+#print top brands
 print(top_brands)
 ```
 |Output : |
