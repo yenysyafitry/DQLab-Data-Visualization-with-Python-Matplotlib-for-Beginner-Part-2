@@ -6,30 +6,28 @@ import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 # Baca dataset
-dataset = pd.read_csv('https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/retail_raw_reduced.csv')
+dataset = pd.read_csv('https://storage.googleapis.com/dqlab-dataset/retail_raw_reduced.csv')
 # Buat kolom baru yang bertipe datetime dalam format '%Y-%m'
 dataset['order_month'] = dataset['order_date'].apply(lambda x: datetime.datetime.strptime(x, "%Y-%m-%d").strftime('%Y-%m'))
 # Buat Kolom GMV
 dataset['gmv'] = dataset['item_price']*dataset['quantity']
 
-### Buat Multi-Line Chart
+# Buat Multi-Line Chart
 dataset.groupby(['order_month','brand'])['gmv'].sum().unstack().plot()
-plt.title('Monthly GMV Year 2019 - Breakdown by Brand', loc='center', pad=30, fontsize=20, color='blue')
-plt.xlabel('Order Month', fontsize=15)
-plt.ylabel('Total Amount (in Billions)', fontsize=15)
+plt.title('Monthly GMV Year 2019 - Breakdown by Brand',loc='center',pad=30, fontsize=20, color='blue')
+plt.xlabel('Order Month', fontsize = 15)
+plt.ylabel('Total Amount (in Billions)',fontsize = 15)
 plt.grid(color='darkgray', linestyle=':', linewidth=0.5)
 plt.ylim(ymin=0)
 labels, locations = plt.yticks()
 plt.yticks(labels, (labels/1000000000).astype(int))
-plt.gcf().set_size_inches(10,5)
+plt.gcf().set_size_inches(10, 5)
 plt.tight_layout()
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| download.png|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1483">Link materi : academy.dqlab.id/main/livecode/165/318/1483</a>
 
@@ -52,11 +50,9 @@ plt.gcf().set_size_inches(12, 5)
 plt.tight_layout()
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| download (1).png|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1484">Link materi : academy.dqlab.id/main/livecode/165/318/1484</a>
 
@@ -79,11 +75,9 @@ plt.gcf().set_size_inches(10,5)
 plt.tight_layout()
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (2).png" width="350" title="hover text">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1486">Link materi : academy.dqlab.id/main/livecode/165/318/1486</a>
 
@@ -117,11 +111,9 @@ plt.gcf().set_size_inches(12,5)
 plt.tight_layout()
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1487">Link materi : academy.dqlab.id/main/livecode/165/318/1487</a>
 
@@ -157,11 +149,9 @@ plt.gcf().set_size_inches(12, 5)
 plt.tight_layout()
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1489">Link materi : academy.dqlab.id/main/livecode/165/318/1489</a>
 
@@ -172,11 +162,10 @@ Senja, Usia: 28, Pendapatan 12500000
 dataset_dki_q4 = dataset[(dataset['province']=='DKI Jakarta') & (dataset['order_month'] >= '2019-10')]
 print(dataset_dki_q4.head())
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1490">Link materi : academy.dqlab.id/main/livecode/165/319/1490</a>
 
@@ -191,11 +180,9 @@ plt.pie(gmv_per_city_dki_q4['gmv'], labels = gmv_per_city_dki_q4['city'], autopc
 plt.title('GMV Contribution Per City - DKI Jakarta in Q4 2019', loc='center', pad=30, fontsize=15, color='blue')
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1491">Link materi : academy.dqlab.id/main/livecode/165/319/1491</a>
 
@@ -215,11 +202,10 @@ plt.yticks(labels, (labels/1000000000).astype(int))
 plt.xticks(rotation=0)
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1492">Link materi : academy.dqlab.id/main/livecode/165/319/1492</a>
 
@@ -240,11 +226,9 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1493">Link materi : academy.dqlab.id/main/livecode/165/319/1493</a>
 
@@ -265,11 +249,9 @@ plt.xticks(rotation=0)
 plt.tight_layout()
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1494">Link materi : academy.dqlab.id/main/livecode/165/319/1494</a>
 
@@ -285,11 +267,9 @@ data_per_customer = (dataset_dki_q4.groupby('customer_id')
                                    .rename(columns={'order_id':'orders'}))
 print(data_per_customer.sort_values(by='orders', ascending=False))
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1496">Link materi : academy.dqlab.id/main/livecode/165/320/1496</a>
 
@@ -311,11 +291,10 @@ plt.xlabel('Number of Orders', fontsize=12)
 plt.ylabel('Number of Customers', fontsize=12)
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1497">Link materi : academy.dqlab.id/main/livecode/165/320/1497</a>
 
@@ -332,11 +311,10 @@ plt.ylabel('Number of Customers', fontsize=12)
 plt.xlim(xmin=0, xmax=200)
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1498">Link materi : academy.dqlab.id/main/livecode/165/320/1498</a>
 
@@ -355,11 +333,9 @@ labels, locations = plt.xticks()
 plt.xticks(labels, (labels/1000000).astype(int))
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1499">Link materi : academy.dqlab.id/main/livecode/165/320/1499</a>
 
@@ -385,11 +361,9 @@ labels, locations = plt.yticks()
 plt.yticks(labels, (labels/1000000).astype(int))
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1502">Link materi : academy.dqlab.id/main/livecode/165/320/1502</a>
 
@@ -410,11 +384,9 @@ dataset_top5brand_dec = dataset[(dataset['order_month']=='2019-12') & (dataset['
 # print top brands
 print(top_brands)
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1504">Link materi : academy.dqlab.id/main/livecode/165/321/1504</a>
 
@@ -439,11 +411,9 @@ plt.gcf().set_size_inches(10, 5)
 plt.tight_layout()
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1505">Link materi : academy.dqlab.id/main/livecode/165/321/1505</a>
 
@@ -461,11 +431,9 @@ plt.ylim(ymin=0)
 plt.xticks(rotation=0)
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1506">Link materi : academy.dqlab.id/main/livecode/165/321/1506</a>
 
@@ -493,11 +461,9 @@ plt.ylim(ymin=0)
 plt.xticks(rotation=0)
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1507">Link materi : academy.dqlab.id/main/livecode/165/321/1507</a>
 
@@ -514,11 +480,9 @@ plt.ylabel('Number of Products',fontsize = 12)
 plt.xlim(xmin=0,xmax=2000000)
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1508">Link materi : academy.dqlab.id/main/livecode/165/321/1508</a>
 
@@ -541,11 +505,9 @@ labels, locations = plt.yticks()
 plt.yticks(labels, (labels/1000000).astype(int))
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1509">Link materi : academy.dqlab.id/main/livecode/165/321/1509</a>
 
@@ -568,11 +530,9 @@ plt.xlim(xmin=0,xmax=2000000)
 plt.ylim(ymin=0,ymax=250)
 plt.show()
 ```
-<details>
-<summary markdown="span">Output :</summary>
-Aksara, Usia: 25, Pendapatan 8500000</br>
-Senja, Usia: 28, Pendapatan 12500000	
-</details>
+|Output : |
+| :--     | 
+| Hello, World!|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/240">Link materi : academy.dqlab.id/main/livecode/165/321/240</a>
 
