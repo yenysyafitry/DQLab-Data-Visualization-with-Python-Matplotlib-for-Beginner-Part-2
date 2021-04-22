@@ -77,7 +77,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (2).png" width="350" title="hover text">|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (2).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/318/1486">Link materi : academy.dqlab.id/main/livecode/165/318/1486</a>
 
