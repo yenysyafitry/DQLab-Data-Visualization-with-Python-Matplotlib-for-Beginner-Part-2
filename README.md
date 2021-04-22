@@ -196,6 +196,13 @@ print(dataset_dki_q4.head())
 ----
 
 ### Membuat Pie Chart 
+<p align="justify">Beberapa parameter yang bisa dimodifikasi:</p>
+<ol><li>
+labels: array yang berisikan label/tulisan yang ditunjukkan untuk masing-masing bagian pie.</li>
+<li>colors: array yang berisikan warna untuk masing-masing bagian pie.</li>
+<li>autopct: format untuk nilai persentasi yang ditampilkan, bisa berupa string atau function.</li>
+<li>shadow: jika diisi True, maka ada bayangan untuk pie chart-nya. Defaultnya adalah False.</li>
+	<li>radius: jari-jari dari pie-chart</li></ol>
 ```plantuml
 import matplotlib.pyplot as plt
 gmv_per_city_dki_q4 = dataset_dki_q4.groupby('city')['gmv'].sum().reset_index()
@@ -204,9 +211,10 @@ plt.pie(gmv_per_city_dki_q4['gmv'], labels = gmv_per_city_dki_q4['city'], autopc
 plt.title('GMV Contribution Per City - DKI Jakarta in Q4 2019', loc='center', pad=30, fontsize=15, color='blue')
 plt.show()
 ```
+
 |Output : |
 | :--     | 
-| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/Screenshot_5.jpg">|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (5).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1491">Link materi : academy.dqlab.id/main/livecode/165/319/1491</a>
 
@@ -229,7 +237,7 @@ plt.show()
 
 |Output : |
 | :--     | 
-| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/Screenshot_5.jpg">|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (6).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1492">Link materi : academy.dqlab.id/main/livecode/165/319/1492</a>
 
@@ -252,7 +260,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+|  <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (7).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1493">Link materi : academy.dqlab.id/main/livecode/165/319/1493</a>
 
@@ -275,7 +283,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (8).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/319/1494">Link materi : academy.dqlab.id/main/livecode/165/319/1494</a>
 
@@ -293,13 +301,19 @@ print(data_per_customer.sort_values(by='orders', ascending=False))
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+|  <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (9).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1496">Link materi : academy.dqlab.id/main/livecode/165/320/1496</a>
 
 ----
 
 ### Membuat Histogram - Part 1 
+<p align="justify">Parameter lain yang bisa ditambahkan yaitu:</p>
+<ol><li> bins: jumlah bin (kelompok nilai) yang diinginkan</li>
+<li>range: nilai minimum dan maksimum yang ditampilkan</li>
+<li>orientation: ‘horizontal’ atau ‘vertikal’</li>
+<li>color: warna bar di histogram</li></ol>
+
 ```plantuml
 import matplotlib.pyplot as plt
 plt.clf()
@@ -318,7 +332,7 @@ plt.show()
 
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (10).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1497">Link materi : academy.dqlab.id/main/livecode/165/320/1497</a>
 
@@ -338,7 +352,7 @@ plt.show()
 
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (11).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1498">Link materi : academy.dqlab.id/main/livecode/165/320/1498</a>
 
@@ -359,7 +373,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (12).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1499">Link materi : academy.dqlab.id/main/livecode/165/320/1499</a>
 
@@ -387,7 +401,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (13).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/320/1502">Link materi : academy.dqlab.id/main/livecode/165/320/1502</a>
 
@@ -410,7 +424,7 @@ print(top_brands)
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/Screenshot_1.jpg">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1504">Link materi : academy.dqlab.id/main/livecode/165/321/1504</a>
 
@@ -437,7 +451,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (14).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1505">Link materi : academy.dqlab.id/main/livecode/165/321/1505</a>
 
@@ -457,7 +471,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (15).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1506">Link materi : academy.dqlab.id/main/livecode/165/321/1506</a>
 
@@ -487,7 +501,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (16).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1507">Link materi : academy.dqlab.id/main/livecode/165/321/1507</a>
 
@@ -504,9 +518,10 @@ plt.ylabel('Number of Products',fontsize = 12)
 plt.xlim(xmin=0,xmax=2000000)
 plt.show()
 ```
+
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (17).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1508">Link materi : academy.dqlab.id/main/livecode/165/321/1508</a>
 
@@ -529,9 +544,10 @@ labels, locations = plt.yticks()
 plt.yticks(labels, (labels/1000000).astype(int))
 plt.show()
 ```
+
 |Output : |
 | :--     | 
-| Hello, World!|
+|<img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (18).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/1509">Link materi : academy.dqlab.id/main/livecode/165/321/1509</a>
 
@@ -556,7 +572,7 @@ plt.show()
 ```
 |Output : |
 | :--     | 
-| Hello, World!|
+| <img src="https://github.com/yenysyafitry/DQLab-Data-Visualization-with-Python-Matplotlib-for-Beginner-Part-2/blob/main/download (19).png">|
 </br>
 <a href="https://academy.dqlab.id/main/livecode/165/321/240">Link materi : academy.dqlab.id/main/livecode/165/321/240</a>
 
